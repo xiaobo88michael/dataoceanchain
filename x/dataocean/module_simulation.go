@@ -3,15 +3,15 @@ package dataocean
 import (
 	"math/rand"
 
-	"dataocean/testutil/sample"
-	dataoceansimulation "dataocean/x/dataocean/simulation"
-	"dataocean/x/dataocean/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	simappparams "github.com/cosmos/cosmos-sdk/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
+	"github.com/xiaobo88michael/dataoceanchain/testutil/sample"
+	dataoceansimulation "github.com/xiaobo88michael/dataoceanchain/x/dataocean/simulation"
+	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/types"
 )
 
 // avoid unused import issue

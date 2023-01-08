@@ -1,9 +1,9 @@
 package dataocean
 
 import (
-	"dataocean/x/dataocean/keeper"
-	"dataocean/x/dataocean/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/keeper"
+	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

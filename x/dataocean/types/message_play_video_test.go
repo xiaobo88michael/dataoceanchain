@@ -3,9 +3,9 @@ package types
 import (
 	"testing"
 
-	"dataocean/testutil/sample"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/stretchr/testify/require"
+	"github.com/xiaobo88michael/dataoceanchain/testutil/sample"
 )
 
 func TestMsgPlayVideo_ValidateBasic(t *testing.T) {
