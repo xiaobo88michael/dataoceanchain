@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
+	"dataocean/x/dataocean/types"
 	"github.com/stretchr/testify/require"
-	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/types"
 )
 
 func TestGenesisState_Validate(t *testing.T) {

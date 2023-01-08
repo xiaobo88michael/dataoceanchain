@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	keepertest "dataocean/testutil/keeper"
+	"dataocean/testutil/nullify"
+	"dataocean/x/dataocean"
+	"dataocean/x/dataocean/types"
 	"github.com/stretchr/testify/require"
-	"github.com/xiaobo88michael/dataoceanchain/testutil/nullify"
-	"github.com/xiaobo88michael/dataoceanchain/x/dataocean"
-	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/types"
 )
 
 func TestGenesis(t *testing.T) {

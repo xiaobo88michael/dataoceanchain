@@ -11,14 +11,14 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
+	"dataocean/x/dataocean/client/cli"
+	"dataocean/x/dataocean/keeper"
+	"dataocean/x/dataocean/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/client/cli"
-	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/keeper"
-	"github.com/xiaobo88michael/dataoceanchain/x/dataocean/types"
 )
 
 var (
