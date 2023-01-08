@@ -1,0 +1,87 @@
+syntax = "proto3";
+package dataocean.dataocean;
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+import "dataocean/dataocean/params.proto";
+import "dataocean/dataocean/video.proto";
+import "dataocean/dataocean/video_link.proto";
+// this line is used by starport scaffolding # 1
+
+option go_package = "dataocean/x/dataocean/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  // Parameters queries the parameters of the module.
+  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/dataocean/dataocean/params";
+  }
+  // Queries a Video by id.
+	rpc Video(QueryGetVideoRequest) returns (QueryGetVideoResponse) {
+		option (google.api.http).get = "/dataocean/dataocean/video/{id}";
+	}
+
+	// Queries a list of Video items.
+	rpc VideoAll(QueryAllVideoRequest) returns (QueryAllVideoResponse) {
+		option (google.api.http).get = "/dataocean/dataocean/video";
+	}
+
+// Queries a VideoLink by index.
+	rpc VideoLink(QueryGetVideoLinkRequest) returns (QueryGetVideoLinkResponse) {
+		option (google.api.http).get = "/dataocean/dataocean/video_link/{index}";
+	}
+
+	// Queries a list of VideoLink items.
+	rpc VideoLinkAll(QueryAllVideoLinkRequest) returns (QueryAllVideoLinkResponse) {
+		option (google.api.http).get = "/dataocean/dataocean/video_link";
+	}
+
+// this line is used by starport scaffolding # 2
+}
+
+// QueryParamsRequest is request type for the Query/Params RPC method.
+message QueryParamsRequest {}
+
+// QueryParamsResponse is response type for the Query/Params RPC method.
+message QueryParamsResponse {
+  // params holds all the parameters of this module.
+  Params params = 1 [(gogoproto.nullable) = false];
+}
+
+message QueryGetVideoRequest {
+	uint64 id = 1;
+}
+
+message QueryGetVideoResponse {
+	Video Video = 1 [(gogoproto.nullable) = false];
+}
+
+message QueryAllVideoRequest {
+	cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryAllVideoResponse {
+	repeated Video Video = 1 [(gogoproto.nullable) = false];
+	cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryGetVideoLinkRequest {
+	  string index = 1;
+
+}
+
+message QueryGetVideoLinkResponse {
+	VideoLink videoLink = 1 [(gogoproto.nullable) = false];
+}
+
+message QueryAllVideoLinkRequest {
+	cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryAllVideoLinkResponse {
+	repeated VideoLink videoLink = 1 [(gogoproto.nullable) = false];
+	cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+// this line is used by starport scaffolding # 3
