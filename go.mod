@@ -1,4 +1,5 @@
-module dataocean
+module github.com/xiaobo88michael/dataoceanchain
+
 
 go 1.18
 
